@@ -1,5 +1,5 @@
 {
-  "name": "bff",
+  "name": "bff-server",
   "module": "index.ts",
   "type": "module",
   "scripts": {
