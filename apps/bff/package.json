@@ -12,5 +12,10 @@
   "dependencies": {
     "bun": "^1.1.12",
     "elysia": "^1.0.23"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "@types/bun": "^1.1.3"
   }
 }
