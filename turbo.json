@@ -3,24 +3,40 @@
   "globalDependencies": [
     "**/.env.*local"
   ],
+  "globalEnv": [
+    "PORT"
+  ],
   "tasks": {
     "build": {
       "dependsOn": [
         "^build"
-      ],
-      "outputs": [
-        ".next/**",
-        "!.next/cache/**"
       ]
+    },
+    "test": {
+      "outputs": [
+        "coverage/**"
+      ],
+      "dependsOn": []
     },
     "lint": {
       "dependsOn": [
-        "^lint"
+        "^build"
+      ]
+    },
+    "typecheck": {
+      "dependsOn": [
+        "^build"
       ]
     },
     "dev": {
+      "dependsOn": [
+        "^build"
+      ],
       "cache": false,
       "persistent": true
+    },
+    "clean": {
+      "cache": false
     }
   }
 }
