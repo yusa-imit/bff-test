@@ -1,12 +1,17 @@
-import React from "react";
-import "./styles.css";
+import { log } from "@repo/logger";
 import { CounterButton, Link } from "@repo/ui";
 
-function App(): JSX.Element {
+export const metadata = {
+  title: "Store | Kitchen Sink",
+};
+
+export default function Store(): JSX.Element {
+  log("Hey! This is the Store page.");
+
   return (
     <div className="container">
       <h1 className="title">
-        Admin <br />
+        Store <br />
         <span>Kitchen Sink</span>
       </h1>
       <CounterButton />
@@ -16,12 +21,10 @@ function App(): JSX.Element {
           Turborepo
         </Link>
         {" & "}
-        <Link href="https://vitejs.dev/" newTab>
-          Vite
+        <Link href="https://nextjs.org/" newTab>
+          Next.js
         </Link>
       </p>
     </div>
   );
 }
-
-export default App;
