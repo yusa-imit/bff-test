@@ -14,7 +14,11 @@
     "prettier": "^3.2.5",
     "turbo": "latest"
   },
-  "packageManager": "pnpm@9.1.0",
+  "packageManager": "bun@1.1.12",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
   "engines": {
     "node": ">=18"
   },
